@@ -19,4 +19,8 @@ This project targets Python 3 exclusively. Python 3.4 support is optional and ca
 
 If you are planning on working on a "larger" issue or feature, please add yourself to the corresponding issue on GitHub or create a new one there - before you start working. This helps to reduce duplicate effort and allows to coordinate developers.
 
-Everything is supposed to be tested. However, right now, *refuse* does not have a single test on its own. It can merely be tested through filesystems relying on it. This is currently done based on [LoggedFS-python](https://github.com/pleiszenburg/loggedfs-python) for x86_64 Linux. **The main objective therefore is to add a testing infrastructure.** New features are welcome, too, but tests come first. Tests based on Qemu are the likely way to go because Qemu can emulate all kinds of architectures on a single machine. Anything else that helps testing *refuse* is also highly welcome. Static code analysis comes to mind, for instance.
+Everything is supposed to be tested. However, right now, *refuse* has a very limited test suite. It can merely be tested through filesystems relying on it. This is currently done based on [LoggedFS-python](https://github.com/pleiszenburg/loggedfs-python) for x86_64 Linux. **The main objective therefore is to add a testing infrastructure.** New features are welcome, too, but tests come first. Tests based on Qemu are the likely way to go because Qemu can emulate all kinds of architectures on a single machine. Anything else that helps testing *refuse* is also highly welcome. Static code analysis comes to mind, for instance.
+
+## Verifying changes
+
+    tox -e py38  # to run tests
